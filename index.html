@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Карточка товара </title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <main id="app">
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-box">
+                        <a href="#">
+                            <img src="img/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="functions-box">
+                        <div class="function">
+                            <a href="#">
+                                <img src="img/icon/person.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="function">
+                            <a href="#">
+                                <img src="img/icon/like.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="function">
+                            <a href="#">
+                                <img src="img/icon/card.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="burger function ">
+                            <a href="#">
+                                <img src="img/icon/burger.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-box">
+                        <div class="mobile-menu-content">
+                            <div class="mobile-menu-box-close">
+                                <a href="#">
+                                    <img src="img/icon/close.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="mobile-menu-nav">
+                                <li>
+                                    <a href="#">
+                                        Постельное белье
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        одежда для дома
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Одежда для улицы
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Выход
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="product-main-content">
+            <div class="container">
+                <div class="product-container">
+                    <div class="product-container-item product-slider-container">
+                        <div class="slider" id='slider'>
+                            <div class="current-photo">
+                                <div class="photo-bar">
+                                    <div class="photo-bar-item photo-bar-item-current">
+                                        <img src="img/slider/1.jpg" alt="">
+                                    </div>
+                                    <div class="photo-bar-item">
+                                        <img src="img/slider/2.jpg" alt="">
+                                    </div>
+                                    <div class="photo-bar-item">
+                                        <img src="img/slider/3.jpg" alt="">
+                                    </div>
+                                    <div class="photo-bar-item">
+                                        <img src="img/slider/4.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-container-item product-functions-container">
+                        <div class="product-functions-container-top">
+                            <h3 class="product-title">
+                                Пижама для девочек
+                            </h3>
+                            <p class="product-article">
+                                Арт. <span class="article">02765/46</span>
+                            </p>
+                            <div class="feedback-box">
+                                <span>
+                                    Отзывы
+                                </span>
+                                <span class="stars">
+                                    <img src="img/icon/filled-star.svg" class="rating-star" alt="">
+                                    <img src="img/icon/filled-star.svg" class="rating-star" alt="">
+                                    <img src="img/icon/filled-star.svg" class="rating-star" alt="">
+                                    <img src="img/icon/filled-star.svg" class="rating-star" alt="">
+                                    <img src="img/icon/empty-star.svg" class="rating-star" alt="">
+                                </span>
+                                <span class="feedback-link">
+                                    <span class="feedback-qnt">14</span> отзывов <img src="img/icon/right-arrow.svg"
+                                        alt="">
+                                </span>
+                            </div>
+                            <div class="price-box">
+                                <div class="prices">
+                                    <span class="price actual-price">
+                                        <div class="price-item">
+                                            <span class="qty">800</span> <span class="currency">₽</span>
+                                        </div>
+                                    </span>
+                                    <span class="price old-price">
+                                        <div class="price-item">
+                                            <span class="qty">1500</span> <span class="currency">₽</span>
+                                        </div>
+                                    </span>
+                                    <span class="price">
+                                        <img src="img/icon/right-arrow.svg" alt="">
+                                    </span>
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">
+                                        скидка -36%
+                                    </div>
+                                    <div class="tag">
+                                        акция -20%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="size-box">
+                                <div class="select-box">
+                                    <select class="size-select" name="" id="">
+                                        <option value="" disabled selected>Выбрать размер</option>
+                                        <option value="">S</option>
+                                        <option value="">M</option>
+                                        <option value="">L</option>
+                                        <option value="">XL</option>
+                                    </select>
+                                </div>
+                                <div class="size-help">
+                                    <a href="#">Определить размер</a>
+                                </div>
+                            </div>
+                            <div class="add-box">
+                                <div class="counter">
+                                    <div class="plus counter-button">+</div>
+                                    <div class="number">1</div>
+                                    <div class="minus counter-button">-</div>
+                                </div>
+                                <div class="add-box-buttons">
+                                    <a href="#">
+                                        <div class="add-card-button">
+                                            Добавить в корзину
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="like-button add-card-button">
+                                            <img src="img/icon/white-like.svg" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="size-help">
+                                <a href="#">Купить в 1 клик</a>
+                            </div>
+                        </div>
+                        <div class="product-functions-container-bottom">
+                            <a href="#">
+                                <div class="product-bottom-item">
+                                    <img src="img/icon/clothes.svg" alt=""> <span>Описание товара</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="product-bottom-item">
+                                    <img src="img/icon/clock.svg" alt=""> <span>Доставка и возврат</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="product-bottom-item">
+                                    <img src="img/icon/pay.svg" alt=""> <span>Способы оплаты</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-all-row">
+            <a href="#"> Посмотреть все стили </a>
+        </section>
+        <section class="photo-section">
+            <div class="container">
+                <div class="photo-table">
+                    <div class="photo-table-left">
+                        <a href="#" class="img__link">
+                            <img src="img/products/1.jpg" alt="">
+                            <span class="img__mask">
+                                <div class="img__icon">
+                                    <div class="mask-top">
+                                        <img src="img/icon/fullscreen.svg" alt="">
+                                    </div>
+                                    <div class="content-mask">
+                                        <div class="mask-img-box">
+                                            <img src="img/icon/bag.svg" alt="">
+                                        </div>
+                                        <p class="mask-text">
+                                            Узнай, что на мне
+                                        </p>
+                                    </div>
+                                    <div class="mask-bottom">
+                                        <img src="img/icon/favoritefull.svg" alt=""><span>200</span>
+                                    </div>
+                                </div>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="photo-table-right">
+                        <div class="photo-table-right-row">
+                            <div>
+                                <a href="#" class="img__link">
+                                    <img src="img/products/2.jpg" alt="">
+                                    <span class="img__mask">
+                                        <div class="img__icon">
+                                            <div class="mask-top">
+                                                <img src="img/icon/fullscreen.svg" alt="">
+                                            </div>
+                                            <div class="content-mask">
+                                                <div class="mask-img-box">
+                                                    <img src="img/icon/bag.svg" alt="">
+                                                </div>
+                                                <p class="mask-text">
+                                                    Узнай, что на мне
+                                                </p>
+                                            </div>
+                                            <div class="mask-bottom">
+                                                <img src="img/icon/favoritefull.svg" alt=""><span>200</span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="img__link">
+                                    <img src="img/products/3.jpg" alt="">
+                                    <span class="img__mask">
+                                        <div class="img__icon">
+                                            <div class="mask-top">
+                                                <img src="img/icon/fullscreen.svg" alt="">
+                                            </div>
+                                            <div class="content-mask">
+                                                <div class="mask-img-box">
+                                                    <img src="img/icon/bag.svg" alt="">
+                                                </div>
+                                                <p class="mask-text">
+                                                    Узнай, что на мне
+                                                </p>
+                                            </div>
+                                            <div class="mask-bottom">
+                                                <img src="img/icon/favoritefull.svg" alt=""><span>200</span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="photo-table-right-row">
+                            <div>
+                                <a href="#" class="img__link">
+                                    <img src="img/products/4.jpg" alt="">
+                                    <span class="img__mask">
+                                        <div class="img__icon">
+                                            <div class="mask-top">
+                                                <img src="img/icon/fullscreen.svg" alt="">
+                                            </div>
+                                            <div class="content-mask">
+                                                <div class="mask-img-box">
+                                                    <img src="img/icon/bag.svg" alt="">
+                                                </div>
+                                                <p class="mask-text">
+                                                    Узнай, что на мне
+                                                </p>
+                                            </div>
+                                            <div class="mask-bottom">
+                                                <img src="img/icon/favoritefull.svg" alt=""><span>200</span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="img__link">
+                                    <img src="img/products/5.jpg" alt="">
+                                    <span class="img__mask">
+                                        <div class="img__icon">
+                                            <div class="mask-top">
+                                                <img src="img/icon/fullscreen.svg" alt="">
+                                            </div>
+                                            <div class="content-mask">
+                                                <div class="mask-img-box">
+                                                    <img src="img/icon/bag.svg" alt="">
+                                                </div>
+                                                <p class="mask-text">
+                                                    Узнай, что на мне
+                                                </p>
+                                            </div>
+                                            <div class="mask-bottom">
+                                                <img src="img/icon/favoritefull.svg" alt=""><span>200</span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="container-footer">
+                    <div class="footer-row">
+                        <p class="footer-row-title">
+                            покупателям
+                        </p>
+                        <a href="#">
+                            <p class="footer-row-item">
+                                Каталог
+                            </p>
+                        </a>
+                        <a href="#">
+                            <p class="footer-row-item">
+                                Акции
+                            </p>
+                        </a>
+                        <a href="#">
+                            <p class="footer-row-item">
+                                Бренды
+                            </p>
+                        </a>
+                    </div>
+                    <div class="footer-row">
+                        <p class="footer-row-title">
+                            О нас
+                        </p>
+                        <a href="#">
+                            <p class="footer-row-item">
+                                О компании
+                            </p>
+                        </a>
+                        <a href="#">
+                            <p class="footer-row-item">
+                                Новости
+                            </p>
+                        </a>
+                        <a href="#">
+                            <p class="footer-row-item">
+                                Команда
+                            </p>
+                        </a>
+                    </div>
+                    <div class="footer-row footer-row-email">
+                        <p class="footer-row-title">
+                            Узнайте первыми о новинках и акциях
+                        </p>
+                        <form action="#" class="subscribe-form">
+                            <input class='email-input' type="email" placeholder="Адрес электронной почты">
+                            <div class="button-form-box">
+                                <input type="submit" placeholder="Подписаться">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>
